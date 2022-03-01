@@ -30,6 +30,7 @@ Route::get('/user',[userController::class,'index']);
 Route::get('login',[LoginController::class,'index'])->name('login.index');
 Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
 Route::get('/posts',[PostController::class,'getAllPost'])->name('post.getAllpost');
+Route::get('/add-post',[PostController::class,'addPost'])->name('add.post');
 
 // Route::get('/session/get',[sessionController::class,'getSession'])->name('session.get');
 // Route::get('/session/set',[sessionController::class,'storeData'])->name('session.store');
