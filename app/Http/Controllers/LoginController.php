@@ -16,8 +16,10 @@ $validateData = $request->validate([
     'password' => 'required  | min:6|max:12',
 ]);
 
-      $email = $request->input('email');
-      $password = $request->input('password'); 
-      return  'email : ' . $email . ' password : ' . $password;
+
+  return view('posts');
+    //   $email = $request->input('email');
+    //   $password = $request->input('password'); 
+    //   return  'email : ' . $email . ' password : ' . $password;
     }
 }

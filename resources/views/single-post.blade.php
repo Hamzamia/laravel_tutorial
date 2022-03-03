@@ -14,25 +14,21 @@
             <div class="col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-header">
-                        <h1>Add Post Here</h1>
+                        <h1>Post Details</h1>
                     </div>
                     <div class="card-body">
-                        @if (Session::has('post_created'))
-                            <div class="alert alert-success" role="success">
-                                {{Session::get('post-created')}}
-                            </div>
-                        @endif
-                        <form method="post" action="{{route('post.addsubmit')}}">
-                            @csrf
+                       
+                        <form >
+                           
                             <div class="form-group">
                                 <label for="title">Post Title</label>
-                                <input type="text" name="title"  class="form-control" placeholder="Enter post title">
+                                <input type="text" name="title" value="{{$post->Title}}" class="form-control" placeholder="Enter post title">
                             </div>
                             <div class="form-group">
                                 <label for="Body">Post Description</label>
-                                <textarea class="form-control" name="body" rows="3" cols=""></textarea>
+                                <textarea class="form-control" name="body" rows="3" cols="">{{$post->Body}}</textarea>
                             </div>
-                            <input type="submit" class="btb btn-success my-3 rounded" value="submit">
+                            
                         </form>
                     </div>
                 </div>

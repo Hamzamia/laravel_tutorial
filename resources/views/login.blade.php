@@ -15,7 +15,7 @@
                 <div class="card-header">Login Form</div>
             </div>
             <div class="card-body">
-            <form action="{{route('login.submit')}}" method="POST">
+            <form action="{{route('post.getAllpost')}}" method="get">
                 @csrf
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
@@ -33,8 +33,14 @@
                     @enderror
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-success">Submit</button>
              </form>
+             <button type="submit" class="btn btn-success my-3" >
+                 <a href="/posts"  style="color:white; text-decoration:none;">Show Posts</a>
+             </button>
+             <!-- <button type="submit" class="btn btn-success my-3" >
+                 <a href="/"  style="color:white; text-decoration:none;">Add  Post</a>
+             </button> -->
             </div>
         </div>
     </div>
